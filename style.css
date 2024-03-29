@@ -1,0 +1,57 @@
+/* Global styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+  
+.container {
+	max-width: 900px;
+	margin: 50px auto;
+}
+  
+.card {
+	border-radius: 10px;
+}
+
+  
+/* Social media stats styles */
+  .card-header {
+	background-color: #007bff;
+	color: #fff;
+	font-weight: bold;
+}
+  
+  
+.card-body p {
+	margin-bottom: 5px;
+}
+  
+/* Style each social media card */
+  #twitter-stats,
+  #facebook-stats,
+  #instagram-stats,
+  #tiktok-stats,
+  #youtube-stats {
+	padding: 20px;
+}
+  
+
+
+/* Chart container styles */
+.chart-container {
+	position: relative;
+	margin-top: 10px;
+}
+  
+.btn-exit {
+	background-color: #0056b3; 
+	color: #fff; 
+	border-color: #0056b3; 
+}
+  
+.btn-exit:hover {
+	background-color: #007bff; 
+	border-color: #007bff;
+	color: #fff; 
+}
+  

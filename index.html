@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">Social Media Dashboard</h1>
+    <div id="auth-container">
+      <input type="email" id="email" class="form-control my-2" placeholder="Email">
+      <input type="password" id="password" class="form-control my-2" placeholder="Password">
+      <button class="btn btn-primary my-2" onclick="signIn()">Sign In</button>
+      <button class="btn btn-secondary my-2" onclick="signUp()">Sign Up</button>
+      <p id="auth-message" class="text-danger"></p>
+    </div>
+    <div id="dashboard-container" style="display: none;">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i><img src="./twitter-x.svg"> &nbsp;Twitter</i>
+            </div>
+            <div id="twitter-stats" class="card-body">
+               <!-- Twitter stats placeholder -->
+              <p><i><img src="./twitter-x.svg"></i> <span id="twitter-reactions">0</span> Reactions</p>
+              <p><i class="far fa-comment"></i> <span id="twitter-comments">0</span> Comments</p>
+              <p><i class="fas fa-share"></i> <span id="twitter-shares">0</span> Shares</p>
+              <p>Posts This Week: <span id="twitter-posts">0</span></p>
+            </div>
+            <canvas id="twitter-chart" width="300" height="200" class="my-3"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fab fa-facebook-f"> &nbsp;Facebook</i>
+            </div>
+            <div id="facebook-stats" class="card-body">
+              <!-- Facebook stats placeholder -->
+              <p><i class="fab fa-facebook-f"></i> <span id="facebook-reactions">0</span> Reactions</p>
+              <p><i class="far fa-comment"></i> <span id="facebook-comments">0</span> Comments</p>
+              <p><i class="fas fa-share"></i> <span id="facebook-shares">0</span> Shares</p>
+              <p>Posts This Week: <span id="facebook-posts">0</span></p>
+            </div>
+            <canvas id="facebook-chart" width="300" height="200" class="my-3"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fab fa-instagram"> &nbsp;Instagram</i>
+            </div>
+            <div id="instagram-stats" class="card-body">
+              <!-- Instagram stats placeholder -->
+              <p><i class="fab fa-instagram"></i> <span id="instagram-reactions">0</span> Reactions</p>
+              <p><i class="far fa-comment"></i> <span id="instagram-comments">0</span> Comments</p>
+              <p><i class="fas fa-share"></i> <span id="instagram-shares">0</span> Shares</p>
+              <p>Posts This Week: <span id="instagram-posts">0</span></p>
+            </div>
+            <canvas id="instagram-chart" width="300" height="200" class="my-3"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fab fa-youtube"> &nbsp;YouTube</i>
+            </div>
+            <div id="youtube-stats" class="card-body">
+              <!-- YouTube stats placeholder -->
+              <p><i class="fab fa-youtube"></i> <span id="youtube-reactions">0</span> Reactions</p>
+              <p><i class="far fa-comment"></i> <span id="youtube-comments">0</span> Comments</p>
+              <p><i class="fas fa-share"></i> <span id="youtube-shares">0</span> Shares</p>
+              <p>Videos This Week: <span id="youtube-videos">0</span></p>
+            </div>
+            <canvas id="youtube-chart" width="300" height="200" class="my-3"></canvas>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary my-2 btn-exit" onclick="exitDashboard()">Exit</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
